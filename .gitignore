@@ -1,7 +1,6 @@
 .bundle
-db/
-log/
-tmp/
+log/*
+tmp/*
 .sass-cache/
 .bundle
 .gems
