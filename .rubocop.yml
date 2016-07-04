@@ -11,3 +11,6 @@ Style/BlockComments:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/TrailingCommaInLiteral:
+  Enabled: false
