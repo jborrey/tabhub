@@ -10,10 +10,12 @@
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
 
-# Although this is not needed for an api-only application, rails4 
-# requires secret_key_base or secret_token to be defined, otherwise an 
+# Although this is not needed for an api-only application, rails4
+# requires secret_key_base or secret_token to be defined, otherwise an
 # error is raised.
 # Using secret_token for rails3 compatibility. Change to secret_key_base
 # to avoid deprecation warning.
 # Can be safely removed in a rails3 api-only application.
-Tabhub::Application.config.secret_token = '317856b30a05c50f7164b7ceee370e0d5a18bc83435f5521c2eb40fb7673015d0766483148a846b18e1b1fbfa521603a72426d906ddc6ceb90e295be8b6fbb92'
+Tabhub::Application.config.secret_token =
+  '317856b30a05c50f7164b7ceee370e0d5a18bc83435f5521c2eb40fb7673015d'\
+  '0766483148a846b18e1b1fbfa521603a72426d906ddc6ceb90e295be8b6fbb92'

@@ -1,0 +1,9 @@
+.bundle
+db/
+log/
+tmp/
+.sass-cache/
+.bundle
+.gems
+.DS_Store
+*.swp
