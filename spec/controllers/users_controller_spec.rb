@@ -9,7 +9,7 @@ RSpec.describe UsersController, type: :controller do
       first_name: 'Shinji',
       last_name: 'Ikari',
       username: 'sikari',
-      email: 'sikaria@nerv.com'
+      email: 'sikaria@nerv.com',
     }
   end
 
