@@ -68,15 +68,16 @@ RSpec.describe UsersController, type: :controller do
 
   describe 'PUT update' do
     describe 'with valid params' do
-      let(:new_attributes) { { username: 'EVA U-01' } }
+      let(:eva_name) { 'EVA U-01' }
+      let(:new_attributes) { { username: eva_name } }
 
       it 'updates the requested user' do
         user = User.create! valid_attributes
+        expect(user.username).not_to eq(eva_name)
         put :update,
             { id: user.to_param, user: new_attributes },
             valid_session
-        user.reload
-        expect(user.username).to eq('EVA U-01')
+        expect(user.reload.username).to eq(eva_name)
         expect(response).to be_success # actually get 204
         expect(assigns(:user)).to eq(user)
       end
