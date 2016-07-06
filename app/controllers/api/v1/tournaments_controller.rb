@@ -1,5 +1,5 @@
-# Interface to all tournament actions.
 module Api::V1
+  # Interface to all tournament actions.
   class TournamentsController < ApiController
     include ActionController::Serialization
 

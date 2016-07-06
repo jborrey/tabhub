@@ -75,6 +75,8 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rack (1.6.4)
+    rack-attack (4.4.1)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.6)
@@ -152,6 +154,7 @@ DEPENDENCIES
   factory_girl_rails
   pg
   pry
+  rack-attack
   rails (= 4.2.6)
   rails-api
   rspec-rails (= 3.1.0)

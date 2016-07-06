@@ -1,5 +1,5 @@
-# Interface to interact with Insitutions.
 module Api::V1
+  # Interface to interact with Insitutions.
   class InstitutionsController < ApiController
     include ActionController::Serialization
 
