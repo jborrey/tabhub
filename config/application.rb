@@ -31,5 +31,7 @@ module Tabhub
 
     # ONLY API
     config.api_only = true
+
+    config.middleware.use Rack::Attack
   end
 end

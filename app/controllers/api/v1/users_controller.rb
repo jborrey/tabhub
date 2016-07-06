@@ -1,5 +1,5 @@
-# Interface for all user actions.
 module Api::V1
+  # Interface for all user actions.
   class UsersController < ApiController
     include ActionController::Serialization
 
