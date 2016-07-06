@@ -76,15 +76,16 @@ RSpec.describe TournamentsController, type: :controller do
 
   describe 'PUT update' do
     describe 'with valid params' do
-      let(:new_attributes) { { name: 'Angels VS Eva' } }
+      let(:new_name) { 'Angels VS Eva' }
+      let(:new_attributes) { { name: new_name } }
 
       it 'updates the requested tournament' do
         tournament = Tournament.create! valid_attributes
+        expect(tournament.name).not_to eq(new_name)
         put :update,
             { id: tournament.to_param, tournament: new_attributes },
             valid_session
-        tournament.reload
-        expect(tournament.name).to eq('Angels VS Eva')
+        expect(tournament.reload.name).to eq(new_name)
         expect(response).to be_success # actually get 204
         expect(assigns(:tournament)).to eq(tournament)
       end

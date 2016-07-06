@@ -2,9 +2,14 @@
 
 ### Resource Creation
 ```bash
+# user
 bin/rails generate scaffold User first_name:string last_name:string username:string{24}:uniq email:string:uniq
 
+# tournament
 bin/rails generate scaffold Tournament name:string start_date:datetime end_date:datetime location:string description:text debate_format:string tournament_type:string number_of_rounds:integer owner_id:integer institution_id:integer
+
+# institution
+bin/rails generate scaffold Institution name:string location:string president_id:integer website:string twitter_handle:string facebook_page:string youtube_channel:string founded_at:datetime
 ```
 
 ### For local development on Mac

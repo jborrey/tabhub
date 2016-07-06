@@ -7,8 +7,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-NUM_USERS = 1000
-NUM_TOURNAMENTS = 20
+NUM_USERS = 10000
+NUM_INSTITUTIONS = 500
+NUM_TOURNAMENTS = 50
 
 NUM_USERS.times do |i|
   User.create(
@@ -16,6 +17,17 @@ NUM_USERS.times do |i|
     last_name:  "User #{1 + i} LN",
     username:   "User #{1 + i}",
     email:      "user#{1 + i}@example.com",
+  )
+end
+
+NUM_INSTITUTIONS.times do |i|
+  Institution.create(
+    name: "Institution #{i}",
+    university: "University #{i}",
+    location: "Vault #{i}",
+    president_id: (1 + i),
+    website: 'www.example#{i}.com',
+    founded_at: "#{1897 + i}-01-01"
   )
 end
 

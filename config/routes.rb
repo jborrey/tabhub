@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :institutions, except: [:new, :edit]
   resources :tournaments, except: [:new, :edit]
   resources :users, except: [:new, :edit]
   # The priority is based upon order of creation:
