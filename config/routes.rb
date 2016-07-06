@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  resources :institutions, except: [:new, :edit]
-  resources :tournaments, except: [:new, :edit]
-  resources :users, except: [:new, :edit]
+  constraints subdomain: 'api' do
+    scope module: 'api' do
+      namespace :v1 do
+        resources :users, except: [:new, :edit]
+        resources :institutions, except: [:new, :edit]
+        resources :tournaments, except: [:new, :edit]
+      end
+    end
+  end
+
   # The priority is based upon order of creation:
   #   first created -> highest priority.
   # See how all your routes lay out with "rake routes".
