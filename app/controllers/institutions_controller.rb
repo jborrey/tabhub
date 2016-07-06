@@ -1,5 +1,7 @@
 # Interface to interact with Insitutions.
 class InstitutionsController < ApplicationController
+  include ActionController::Serialization
+
   before_action :set_institution, only: [:show, :update, :destroy]
 
   # GET /institutions

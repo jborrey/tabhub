@@ -1,5 +1,7 @@
 # Interface to all tournament actions.
 class TournamentsController < ApplicationController
+  include ActionController::Serialization
+
   before_action :set_tournament, only: [:show, :update, :destroy]
 
   # GET /tournaments
